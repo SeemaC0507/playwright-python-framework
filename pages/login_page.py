@@ -17,5 +17,8 @@ class LoginPage:
 
     def is_logged_in(self):
         return "inventory" in self.page.url
+
+    def get_error_message(self):
+        return self.page.locator("[data-test='error']").text_content()    
   
 
